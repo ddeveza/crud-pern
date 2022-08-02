@@ -31,7 +31,7 @@ app.get('/todos', async (req, res) => {
 
   const allTodos = await pool.query('SELECT * FROM todo');
 
-  res.status(200).json(allTodos);
+  res.status(200).json(allTodos.rows);
 });
 
 //get a todo
